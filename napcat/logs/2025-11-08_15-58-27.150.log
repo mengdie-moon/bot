@@ -1,0 +1,40 @@
+11-08 15:58:27 [info] [StdOut] 已重定向到命名管道: \\.\pipe\NapCat_59420
+11-08 15:58:27 [info] [QQ版本兼容性检测] 当前版本Appid未内置 通过Major获取 为了更好的性能请尝试更新NapCat
+11-08 15:58:27 [info] [NapCat] [Core] NapCat.Core Version: 4.8.95
+11-08 15:58:27 [info] [Check] ffmpeg: E:\hhttmmll\Py\QQBot\napcat\ffmpeg\ffmpeg.exe
+11-08 15:58:27 [info] [Check] ffprobe: E:\hhttmmll\Py\QQBot\napcat\ffmpeg\ffprobe.exe
+11-08 15:58:27 [info] [NapCat] [WebUi] WebUi Local Panel Url: http://127.0.0.1:6099/webui?token=napcat
+11-08 15:58:27 [info] 等待网络连接...
+11-08 15:58:28 [info] 网络已连接
+11-08 15:58:28 [info] 正在快速登录  3927480137
+11-08 15:58:28 [error] 快速登录错误： 登录需要手Q验证。
+11-08 15:58:28 [warn] 请扫描下面的二维码，然后在手Q上授权登录：
+11-08 15:58:28 [warn] 
+
+▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+█ ▄▄▄▄▄ █▄▄███▀▄█▀▀█▄▀▄  ▄█ ▄▄▄▄▄ █
+█ █   █ █ ▀█ ▄ █▀ █▄█▀▀   █ █   █ █
+█ █▄▄▄█ █▄ ▄▄▀▀█▄█ ▀  ▀▄▄ █ █▄▄▄█ █
+█▄▄▄▄▄▄▄█▄▀▄▀▄█ █ ▀▄▀▄█ █▄█▄▄▄▄▄▄▄█
+█▄ ▄▄█▀▄█ ▀████▀▄██▄▀▀ █▀ ▄▀█▄▄ ▀ █
+█▄▀██ █▄▀ ██▀▀▀▄▀██▄▀▄▄▀▄ █ ▀▄█▄ ▄█
+█ ▀▀▀▀▀▄▄▄▄▀ █▄█ ▀ ▀▀ ▄▄▄▄▄█▄▄ ▀▀██
+████▀▄ ▄ ▀▄▀█ ▄██ ▄█▄█ ▀█ ▀  ▄█ ███
+█▄▄▀███▄█  ▄▄▀  ▀▀▄ ███▄▀       ▄ █
+█ ▀▄▀█▀▄▀▀ ▄▄ █▀ █ █▀▀█ ▀▀  ██ █▄▀█
+█ ▄█  █▄▄██▄▄ █▀▄▀▄▄▀█▀█  ▄▀▄█▀▄▀▀█
+██▀▀▀█▀▄█▀█▄▄▄▀ ▀██▄█▀▄▄ ▄▄▀▀▄▀▄ ▄█
+█▄█████▄█▀▄▀▀ ▄█ ▀ ▀ █ ▄  ▄▄▄ ▄██▄█
+█ ▄▄▄▄▄ ██▄▀ ██▄▀█▄▄▄▄ ▄  █▄█ ▀▀███
+█ █   █ █▀ ▀██  ▀█▄▄█▀▄█  ▄▄▄▄█  ▄█
+█ █▄▄▄█ █ ▄▄▀ █▀▄  ▄▀ ▄▄▄▀▄ ▄▀█▄▄▀█
+█▄▄▄▄▄▄▄█▄███▄██▄▄█▄██████▄███▄▄███
+
+二维码解码URL: https://txz.qq.com/p?k=y-3N4WbGWGJ4Kqo*00o21FVsVvwBMafz&f=1600001604
+如果控制台二维码无法扫码，可以复制解码url到二维码生成网站生成二维码再扫码，也可以打开下方的二维码路径图片进行扫码。
+11-08 15:58:28 [warn] 二维码已保存到 E:\hhttmmll\Py\QQBot\napcat\cache\qrcode.png
+11-08 15:58:34 [info] 正在快速登录  3927480137
+11-08 15:58:47 [debug] 本账号数据/缓存目录： D:\NapCat\data
+11-08 15:58:47 [debug] [Core] [Config] 配置文件E:\hhttmmll\Py\QQBot\napcat\config\napcat_3927480137.json加载 {"fileLog":false,"consoleLog":true,"fileLogLevel":"debug","consoleLogLevel":"info","packetBackend":"auto","packetServer":"","o3HookMode":1}
+11-08 15:58:47 [error] [Core] [Packet] PacketBackend 不支持当前QQ版本架构：9.9.20-36330-x64，
+            请参照 https://github.com/NapNeko/NapCatQQ/releases/tag/v4.8.95 配置正确的QQ版本！
