@@ -8,15 +8,34 @@
     {
       "src": "index.html",
       "use": "@vercel/static"
+    },
+    {
+      "src": "napcat/static/(.*)",
+      "use": "@vercel/static",
+      "config": {
+        "publicPath": "/webui"
+      }
     }
   ],
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "/",
+      "dest": "index.html"
+    },
+    {
+      "src": "/health",
       "dest": "main.py"
     },
     {
-      "src": "/",
+      "src": "/webui",
+      "dest": "napcat/static/index.html"
+    },
+    {
+      "src": "/webui/(.*)",
+      "dest": "napcat/static/$1"
+    },
+    {
+      "src": "/(.*)",
       "dest": "index.html"
     }
   ],
