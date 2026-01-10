@@ -1,50 +1,26 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "main.py",
-      "use": "@vercel/python"
-    },
-    {
-      "src": "index.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "napcat/static/(.*)",
-      "use": "@vercel/static",
-      "config": {
-        "publicPath": "/webui"
-      }
+  "functions": {
+    "main.py": {
+      "runtime": "@vercel/python@4.0.0",
+      "maxDuration": 10
     }
-  ],
+  },
   "routes": [
     {
-      "src": "/",
-      "dest": "index.html"
+      "src": "/webui/(.*)",
+      "dest": "/napcat/static/$1"
     },
     {
       "src": "/health",
       "dest": "main.py"
     },
     {
-      "src": "/webui",
-      "dest": "napcat/static/index.html"
-    },
-    {
-      "src": "/webui/(.*)",
-      "dest": "napcat/static/$1"
-    },
-    {
-      "src": "/(.*)",
+      "src": "/",
       "dest": "index.html"
     }
   ],
   "env": {
     "PYTHON_VERSION": "3.10"
-  },
-  "functions": {
-    "main.py": {
-      "maxDuration": 10
-    }
   }
 }
