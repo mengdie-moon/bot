@@ -16,6 +16,11 @@ import traceback
 import requests
 from bs4 import BeautifulSoup
 import re
+from fastapi import FastAPI
+from fastapi.responses import HTMLResponse
+import uvicorn
+import threading
+import os
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
 }
@@ -1306,6 +1311,36 @@ async def on_private_message(msg: PrivateMessage):
         response = await spark_api.query_spark(user_input, session_id)
         await bot.api.post_private_msg(msg.user_id, response)
 
-if __name__ == "__main__":
+# 创建FastAPI应用
+app = FastAPI()
+
+# 读取index.html内容
+with open('index.html', 'r', encoding='utf-8') as f:
+    index_html = f.read()
+
+@app.get("/")
+async def root():
+    return HTMLResponse(content=index_html, status_code=200)
+
+@app.get("/health")
+async def health_check():
+    return {"status": "ok", "message": "Bot is running"}
+
+# 机器人运行线程
+def run_bot():
     load_monitored_groups()
     bot.run(bt_uin="3927480137")
+
+# 如果是在Vercel上运行，使用FastAPI处理请求
+# 否则，直接运行机器人
+if __name__ == "__main__":
+    if "VERCEL_ENV" in os.environ:
+        # 在Vercel上运行，启动FastAPI服务器
+        uvicorn.run(app, host="0.0.0.0", port=int(os.environ.get("PORT", 8000)))
+    else:
+        # 本地运行，启动机器人
+        run_bot()
+
+# 启动机器人线程
+bot_thread = threading.Thread(target=run_bot, daemon=True)
+bot_thread.start()

@@ -1,0 +1,48 @@
+# 忽略虚拟环境
+.venv/
+*.venv/
+
+# 忽略数据和日志目录
+data/
+logs/
+
+# 忽略napcat目录
+napcat/
+
+# 忽略临时文件
+*.pyc
+__pycache__/
+
+# 忽略配置文件中的敏感信息
+*.env
+.env.local
+.env.*.local
+
+# 忽略操作系统文件
+.DS_Store
+Thumbs.db
+
+# 忽略编辑器文件
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 忽略构建文件
+build/
+dist/
+*.egg-info/
+
+# 忽略测试覆盖率文件
+.coverage
+coverage.xml
+htmlcov/
+
+# 忽略Docker相关文件
+Dockerfile
+.dockerignore
+
+# 忽略其他临时文件
+*.tmp
+*.temp
+.cache/

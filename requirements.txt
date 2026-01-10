@@ -1,0 +1,6 @@
+ncatbot
+fastapi
+uvicorn
+requests
+beautifulsoup4
+websockets
